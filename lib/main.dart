@@ -17,7 +17,7 @@ class _MyAppState extends State<MyApp> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+        padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 5),
         child: Column(
           children: [
             Expanded(
