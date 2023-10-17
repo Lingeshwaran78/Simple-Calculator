@@ -16,69 +16,72 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
-        children: [
-          Expanded(
-              flex: 2,
-              child: Container(
-                alignment: Alignment.bottomRight,
-                color: Colors.black,
-                child: Text(
-                  text,
-                  style: TextStyle(color: Colors.white, fontSize: 100),
-                ),
-              )),
-          Expanded(
-              flex: 3,
-              child: Container(
-                color: Colors.black,
-                child: Column(children: [
-                  Row(
-                    children: [
-                      Column(
-                        children: [
-                          calcButton('AC', Colors.white60, Colors.black, 80),
-                          calcButton('7', Colors.white38, Colors.white, 80),
-                          calcButton('4', Colors.white38, Colors.white, 80),
-                          calcButton('1', Colors.white38, Colors.white, 80),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          calcButton('+/-', Colors.white60, Colors.black, 80),
-                          calcButton('8', Colors.white38, Colors.white, 80),
-                          calcButton('5', Colors.white38, Colors.white, 80),
-                          calcButton('2', Colors.white38, Colors.white, 80),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          calcButton('%', Colors.white60, Colors.black, 80),
-                          calcButton('9', Colors.white38, Colors.white, 80),
-                          calcButton('6', Colors.white38, Colors.white, 80),
-                          calcButton('3', Colors.white38, Colors.white, 80),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          calcButton('/', Colors.orange, Colors.white, 80),
-                          calcButton('x', Colors.orange, Colors.white, 80),
-                          calcButton('-', Colors.orange, Colors.white, 80),
-                          calcButton('+', Colors.orange, Colors.white, 80),
-                        ],
-                      ),
-                    ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+        child: Column(
+          children: [
+            Expanded(
+                flex: 2,
+                child: Container(
+                  alignment: Alignment.bottomRight,
+                  color: Colors.black,
+                  child: Text(
+                    text,
+                    style: const TextStyle(color: Colors.white, fontSize: 100),
                   ),
-                  Row(
-                    children: [
-                      calcButton('0', Colors.white38, Colors.white, 175),
-                      calcButton('.', Colors.white38, Colors.white, 80),
-                      calcButton('=', Colors.white38, Colors.white, 80)
-                    ],
-                  )
-                ]),
-              ))
-        ],
+                )),
+            Expanded(
+                flex: 3,
+                child: Container(
+                  color: Colors.black,
+                  child: Column(children: [
+                    Row(
+                      children: [
+                        Column(
+                          children: [
+                            calcButton('AC', Colors.white60, Colors.black, 80),
+                            calcButton('7', Colors.white38, Colors.white, 80),
+                            calcButton('4', Colors.white38, Colors.white, 80),
+                            calcButton('1', Colors.white38, Colors.white, 80),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            calcButton('+/-', Colors.white60, Colors.black, 80),
+                            calcButton('8', Colors.white38, Colors.white, 80),
+                            calcButton('5', Colors.white38, Colors.white, 80),
+                            calcButton('2', Colors.white38, Colors.white, 80),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            calcButton('%', Colors.white60, Colors.black, 80),
+                            calcButton('9', Colors.white38, Colors.white, 80),
+                            calcButton('6', Colors.white38, Colors.white, 80),
+                            calcButton('3', Colors.white38, Colors.white, 80),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            calcButton('/', Colors.orange, Colors.white, 80),
+                            calcButton('x', Colors.orange, Colors.white, 80),
+                            calcButton('-', Colors.orange, Colors.white, 80),
+                            calcButton('+', Colors.orange, Colors.white, 80),
+                          ],
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        calcButton('0', Colors.white38, Colors.white, 175),
+                        calcButton('.', Colors.white38, Colors.white, 80),
+                        calcButton('=', Colors.white38, Colors.white, 80)
+                      ],
+                    )
+                  ]),
+                ))
+          ],
+        ),
       ),
     );
   }
